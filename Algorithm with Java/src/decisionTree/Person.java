@@ -6,6 +6,15 @@ public class Person {
 	private int hairLength;
 	private int weight;
 	private int age;
+	
+	public Person(String name, String gender, int hairLength, int weight, int age) {
+		this.name = name;
+		this.gender = gender;
+		this.hairLength = hairLength;
+		this.weight = weight;
+		this.age = age;
+	}
+	
 	public String getName() {
 		return name;
 	}
