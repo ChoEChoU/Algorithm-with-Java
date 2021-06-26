@@ -1,12 +1,14 @@
 package decisionTree;
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Iterator;
 import java.util.List;
 
 public class DecisionTree {
@@ -16,8 +18,10 @@ public class DecisionTree {
 		List<List<String>> ret = new ArrayList<List<String>>();
 		BufferedReader br = null;
 		
+//		String path = DecisionTree.class.getResource("").getPath();
+		
 		try {
-			br = Files.newBufferedReader(Paths.get("/Algorithm with Java/src/decisionTree/simpsons.csv"));
+			br = Files.newBufferedReader(Paths.get("C:\\Users\\w23640\\git\\Algorithm-with-Java\\Algorithm with Java\\src\\decisionTree\\simpsons.csv"));
 			String line = "";
 			
 			while ((line = br.readLine()) != null) {
@@ -27,6 +31,14 @@ public class DecisionTree {
 				System.out.println(tmpList);
 				ret.add(tmpList);
 			}
+			
+//			for (int i = 0; i < ret.size(); i++) {
+//				if (i != 0) {
+//					List<String> array = ret.get(i);
+//					for (int j = 0; j < array.size(); j++) {
+//					}
+//				}
+//			}
 			
 		} catch (FileNotFoundException e) {
 			// TODO: handle exception
