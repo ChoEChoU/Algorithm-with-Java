@@ -14,7 +14,7 @@ import java.util.List;
 public class DecisionTree {
 	private Node rootNode;
 	
-	public void inputData() {
+	public List<List<String>> inputData() {
 		List<List<String>> ret = new ArrayList<List<String>>();
 		BufferedReader br = null;
 		
@@ -30,20 +30,6 @@ public class DecisionTree {
 				tmpList = Arrays.asList(array);
 				System.out.println(tmpList);
 				ret.add(tmpList);
-			}
-			for (int i = 0; i < ret.size(); i++) {
-				if (i != 0) {
-					List<String> array = ret.get(i);
-					
-					String name = array.get(0);
-					int hairLength = Integer.parseInt(array.get(1));
-					int weight = Integer.parseInt(array.get(2));
-					int age = Integer.parseInt(array.get(3));
-					String gender = array.get(4);
-					
-					
-					Person person = new Person(name, hairLength, weight, age, gender);
-				}
 			}
 			
 		} catch (FileNotFoundException e) {
@@ -62,9 +48,25 @@ public class DecisionTree {
 				e.printStackTrace();
 			}
 		}
+		return ret;
 	}
 	
 	public void createPerson() {
 		
+		List<List<String>> ret = inputData();
+		
+		for (int i = 0; i < ret.size(); i++) {
+			if (i != 0) {
+				List<String> array = ret.get(i);
+				
+				String name = array.get(0);
+				int hairLength = Integer.parseInt(array.get(1));
+				int weight = Integer.parseInt(array.get(2));
+				int age = Integer.parseInt(array.get(3));
+				String gender = array.get(4);
+				
+				Person person = new Person(name, hairLength, weight, age, gender);
+			}
+		}
 	}
 }
