@@ -31,14 +31,20 @@ public class DecisionTree {
 				System.out.println(tmpList);
 				ret.add(tmpList);
 			}
-			
-//			for (int i = 0; i < ret.size(); i++) {
-//				if (i != 0) {
-//					List<String> array = ret.get(i);
-//					for (int j = 0; j < array.size(); j++) {
-//					}
-//				}
-//			}
+			for (int i = 0; i < ret.size(); i++) {
+				if (i != 0) {
+					List<String> array = ret.get(i);
+					
+					String name = array.get(0);
+					int hairLength = Integer.parseInt(array.get(1));
+					int weight = Integer.parseInt(array.get(2));
+					int age = Integer.parseInt(array.get(3));
+					String gender = array.get(4);
+					
+					
+					Person person = new Person(name, hairLength, weight, age, gender);
+				}
+			}
 			
 		} catch (FileNotFoundException e) {
 			// TODO: handle exception
