@@ -7,7 +7,7 @@ public class Person {
 	private int weight;
 	private int age;
 	
-	public Person(String name, String gender, int hairLength, int weight, int age) {
+	public Person(String name, int hairLength, int weight, int age, String gender) {
 		this.name = name;
 		this.gender = gender;
 		this.hairLength = hairLength;
