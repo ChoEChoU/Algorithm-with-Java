@@ -13,7 +13,7 @@ public class Dataset {
 		personSet.add(person);
 	}
 	
-	public ArrayList<Person> addPersonSet(){
+	public ArrayList<Person> getPersonSet(){
 		return personSet;
 	}
 	
