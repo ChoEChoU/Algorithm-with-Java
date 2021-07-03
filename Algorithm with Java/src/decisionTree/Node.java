@@ -1,13 +1,15 @@
 package decisionTree;
 
+import java.util.ArrayList;
+
 public class Node {
-	private Person person;
-
-	public Person getPerson() {
-		return person;
+	private ArrayList<Person> personSet;
+	private Node leftNode;
+	private Node rightNode;
+	
+	public Node() {
+		personSet = new ArrayList<Person>();
 	}
-
-	public void setPerson(Person person) {
-		this.person = person;
-	}
+	
+	
 }
