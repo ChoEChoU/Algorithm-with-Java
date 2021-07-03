@@ -13,6 +13,7 @@ import java.util.List;
 
 public class DecisionTree {
 	private Node rootNode;
+	private Dataset dataset;
 	
 	public List<List<String>> inputData() {
 		List<List<String>> ret = new ArrayList<List<String>>();
@@ -66,7 +67,13 @@ public class DecisionTree {
 				String gender = array.get(4);
 				
 				Person person = new Person(name, hairLength, weight, age, gender);
+				
+				inputDataSet(person);
 			}
 		}
+	}
+	
+	public void inputDataSet(Person person) {
+		dataset.addPersonSet(person);
 	}
 }
